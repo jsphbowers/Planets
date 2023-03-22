@@ -5,4 +5,5 @@ export const PlanetSchema = new Schema({
   biome: { type: String, required: true, maxLength: 30 },
   atmosphere: { type: Boolean, required: true, default: false },
   galaxyId: { type: Schema.Types.ObjectId, required: true, ref: 'Galaxy' }
-})
+},
+  { timestamps: true, toJSON: { virtuals: true } })
